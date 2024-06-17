@@ -1,13 +1,6 @@
 <template>
     <div class="flex flex-col p-8">
-        <input type="text" class="rounded border-2 border-gray-300 w-full focus:outline-none"
-            placeholder="Search for Meals" />
 
-        <div class="flex justify-center gap-2 mt-3">
-            <router-link :to="{ name: 'byLetter', params: { letter } }" v-for="(letter, index) of letters" :key="index">
-                {{ letter }}
-            </router-link>
-        </div>
     </div>
 </template>
 
@@ -18,7 +11,7 @@ import api from '../service/api'
 import { getMeals } from '../utils/getData'
 
 // const meals = computed(()=> store.state.meals)
-const letters = 'ABCDEFGHIJKLMNOPQRSTUVXYZ'.split("")
+
 const ingredients = ref([])
 
 onMounted(async () => {

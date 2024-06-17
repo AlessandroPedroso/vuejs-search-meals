@@ -16,3 +16,15 @@ export async function getMealDetailsById(id) {
 
   return data;
 }
+
+export async function searchMealsByLetters(letter) {
+  const { data } = await api.get(`search.php?f=${letter}`);
+
+  return data;
+}
+
+export async function searchMealsByIngredient(ingredient) {
+  const { data } = await api.get(`filter.php?i=${ingredient}`);
+
+  return data;
+}

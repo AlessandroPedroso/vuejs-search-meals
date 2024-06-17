@@ -1,6 +1,8 @@
 // export const means = ['Salmon']
 export default{
-    searchedMeals:[]
+    searchedMeals:[],
+    mealsByLetter:[],
+    mealsByIngredients:[]
     // searchedMeals:{
     //     loading:false,
     //     data:[]
