@@ -3,13 +3,14 @@
     <MealItem v-for="meal of meals" :key="meal.idMeal" :meal="meal" />
   </div>
 
-  <div v-if="!meals" class="flex justify-center text-gray-600">
+  <div v-if="!meals || meals.length === 0" class="flex justify-center text-gray-600">
     There are no meals
   </div>
 </template>
 
 <script setup>
 import MealItem from "../components/MealItem.vue";
+
 const { meals } = defineProps({
   meals: {
     required: true,

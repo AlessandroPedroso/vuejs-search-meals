@@ -24,7 +24,15 @@ const keyWord = ref("");
 const meals = computed(() => store.state.searchedMeals);
 
 function searchMeals() {
-  store.dispatch("searchMeals", keyWord.value);
+  if(keyWord.value){
+
+    store.dispatch("searchMeals", keyWord.value);
+    
+  }else{
+
+    store.commit("setSearchMeals", []);
+
+  }
 }
 
 onMounted(() => {
