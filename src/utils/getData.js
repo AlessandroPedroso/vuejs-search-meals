@@ -28,3 +28,10 @@ export async function searchMealsByIngredient(ingredient) {
 
   return data;
 }
+
+export async function randomMeals() {
+
+  const { data } = await api.get("random.php");
+  
+  return data
+}

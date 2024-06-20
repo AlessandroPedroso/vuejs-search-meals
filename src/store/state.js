@@ -2,7 +2,8 @@
 export default{
     searchedMeals:[],
     mealsByLetter:[],
-    mealsByIngredients:[]
+    mealsByIngredients: [],
+    ingredient:{}
     // searchedMeals:{
     //     loading:false,
     //     data:[]
